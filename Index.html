@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Form input nama -->
+    <div id="input-nama-section" class="fade-in">
+        <h1>Masukkan Nama Kamu</h1>
+        <input type="text" id="nama" placeholder="Nama kamu">
+        <button onclick="mulaiCountdown()">Mulai</button>
+    </div>
+
+    <!-- Countdown Timer -->
+   <div id="countdown-section" class="hidden">
+    <h2>Countdown Menuju Anniversary</h2>
+    <div id="countdown" class="countdown-timer">00d 00h 00m 00s</div>
+</div>
+    <!-- Pesan Setelah Countdown -->
+    <div id="pesan-section" class="hidden fade-in">
+        <h1 id="pesan-sambutan"></h1>
+        <button id="skip-button" onclick="skipPesan()">Lewati Pesan</button>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar hidden">
+        <a class="navbar-item" href="#home">Home</a>
+        <a class="navbar-item" href="#about">Tentang Kami</a>
+        <a class="navbar-item" href="#gallery">Galeri</a>
+        <a class="navbar-item" href="#messages">Pesan</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

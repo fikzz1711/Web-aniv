@@ -1,0 +1,183 @@
+/* Background putih dan style dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #ffffff; /* Background putih */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1, p {
+    margin: 10px 0;
+}
+
+/* Styling input nama */
+input {
+    padding: 15px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 30px;
+    border: 2px solid #ff4081;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol Mulai */
+button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff4081;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff0073;
+    transform: scale(1.05);
+}
+
+/* Countdown Timer */
+#countdown {
+    font-size: 3em;
+    margin: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0; /* Sembunyikan navbar */
+    transition: opacity 0.5s ease; /* Transisi opacity */
+}
+
+.navbar-item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 20px;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover and selection transition */
+}
+
+.navbar-item:hover {
+    color: #ff4081;
+    background-color: rgba(255, 64, 129, 0.2); /* Light pink background on hover */
+    border-radius: 5px;
+}
+
+/* Warna pink saat navbar dipilih */
+.navbar-item.active {
+    background-color: #ff4081; /* Background pink saat navbar dipilih */
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Animasi Fade-In */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+/* Menyembunyikan navbar awal */
+.hidden {
+    display: none;
+}
+
+/* Animasi Slide-In untuk navbar */
+.slide-in {
+    transform: translateY(-100%);
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Pesan sambutan */
+#pesan-section {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+/* Mengatur posisi navbar */
+.navbar {
+    transition: opacity 0.5s ease; /* Transisi opacity untuk navbar */
+    opacity: 0; /* Awalnya tersembunyi */
+}
+
+.navbar.visible {
+    opacity: 1; /* Tampilkan navbar saat sudah siap */
+}
+
+/* Responsivitas */
+@media (max-width: 600px) {
+    h1, p {
+        font-size: 1.5em; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    button {
+        padding: 10px 30px; /* Ukuran tombol lebih kecil */
+        font-size: 1em;
+    }
+
+    #countdown {
+        font-size: 2em; /* Ukuran countdown lebih kecil */
+    }
+
+    .navbar-item {
+        font-size: 1em; /* Ukuran navbar item lebih kecil */
+        margin: 0 10px; /* Margin lebih kecil */
+    }
+}
+
+@media (max-width: 400px) {
+    input {
+        width: 90%; /* Lebar input lebih besar untuk layar sangat kecil */
+    }
+}
+/* Pesan sambutan */
+#pesan-section {
+    margin-top: 20px;
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.5s ease; /* Smooth scaling effect */
+}
+
+/* Efek skala saat tampil */
+#pesan-section.show {
+    transform: scale(1.05);
+}
+/* Styling countdown timer */
+.countdown-timer {
+    font-size: 4em; /* Ukuran font besar */
+    font-weight: bold; /* Bold untuk teks */
+    color: #ff4081; /* Warna pink */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan teks */
+    margin: 20px; /* Margin untuk jarak */
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan */
+    padding: 20px; /* Padding di dalam timer */
+    border-radius: 15px; /* Sudut bulat */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Bayangan kotak */
+}
